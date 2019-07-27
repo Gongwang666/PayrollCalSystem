@@ -31,8 +31,10 @@ public class PayrollFrame extends JFrame {
 
     private void okButtonMouseClicked(MouseEvent e) {
         JFileChooser jf = new JFileChooser();
-        jf.showOpenDialog(this);//显示打开的文件对话框
-        File f =  jf.getSelectedFile();//使用文件类获取选择器选择的文件
+        //显示打开的文件对话框
+        jf.showOpenDialog(this);
+        //使用文件类获取选择器选择的文件
+        File f =  jf.getSelectedFile();
         Optional<File> opt = Optional.ofNullable(f);
         if(opt.isPresent()){
             try {
